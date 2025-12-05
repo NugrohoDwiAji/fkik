@@ -32,7 +32,7 @@ export default function Berita() {
     <div className="min-h-screen">
       <div className="relative h-80 md:h-96 lg:h-[28rem]">
         <img
-          src="/img/banner-pasca.png"
+          src="/img/banner-fkdk.png"
           alt=""
           className="w-full bg-cover h-full"
         />
@@ -40,7 +40,7 @@ export default function Berita() {
           <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-bold">
             Berita
           </h1>
-          <h2 className="text-white mt-3">Berita Fakultas Pascasarjana</h2>
+          <h2 className="text-white mt-3">Berita Fakultas Kesehatan</h2>
         </div>
       </div>
 

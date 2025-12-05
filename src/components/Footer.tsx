@@ -83,12 +83,12 @@ const Footer = () => {
     handleGetProdi();
   }, []);
   return (
-    <footer className="bg-gradient-to-r from-yellow-600 to-yellow-500  text-white flex flex-col items-center">
+    <footer className="bg-gradient-to-r from-green-800 to-green-600  text-white flex flex-col items-center">
       <div className="md:flex md:gap-16 px-7 pt-5 md:pt-14 md:px-10 pb-10 lg:flex gap-28 lg:gap-0  lg:text-xl  lg:w-full justify-center  ">
         {/* alamat dan logo */}
-        <div className="lg:mt-8">
+        <div className="lg:mt-8 lg:mr-3">
           <img
-            src="/img/pascasarjana.png"
+            src="/img/FKIK.png"
             alt=""
             className="text-white h-28 w-full"
           />
@@ -122,7 +122,7 @@ const Footer = () => {
                 key={index}
                 href={item.url} 
                 target="_blank"
-                className="border p-2 rounded-full hover:text-purple-900 hover:bg-white hover:cursor-pointer"
+                className="border p-2 rounded-full hover:text-green-700 hover:bg-white hover:cursor-pointer"
               >
                 {item.icon}
               </Link>

@@ -47,7 +47,7 @@ const Faq = () => {
       <div className="min-h-screen">
         <div className="relative h-80 md:h-96 lg:h-[43rem]">
           <img
-            src="/img/banner-fp.png"
+            src="/img/banner-fkdk.png"
             alt=""
             className="w-full bg-cover h-full"
           />
@@ -63,7 +63,7 @@ const Faq = () => {
           </div>
         </div>
   
-        <div className="text-yellow-400 text-shadow-lg/20 text-center mt-10 ">
+        <div className="text-green-600 text-shadow-lg/20 text-center mt-10 ">
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold">FAQ</h1>
         </div>
         {/* Main */}

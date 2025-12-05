@@ -30,7 +30,7 @@ export default function Pengumuman() {
     <div className="min-h-screen">
       <div className="relative h-80 md:h-96 lg:h-[28rem]">
         <img
-          src="/img/banner-pasca.png"
+          src="/img/banner-fkdk.png"
           alt=""
           className="w-full bg-cover h-full"
         />

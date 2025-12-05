@@ -53,7 +53,7 @@ export default function Dosen() {
     <div className="min-h-screen">
       <div className="relative h-80 md:h-96 lg:h-[35rem]">
         <img
-          src="/img/banner-pasca.png"
+          src="/img/banner-fkdk.png"
           alt=""
           className="w-full bg-cover h-full"
         />

@@ -18,7 +18,7 @@ const createUploadDir = (dir: string) => {
 };
 
 const handlePutMethod = async (req: NextApiRequest, res: NextApiResponse) => {
-  const uploadPath = "/home/pasca/uploads/img";
+  const uploadPath = path.join(process.cwd(), "public", "img");
 
   createUploadDir(uploadPath);
 
@@ -47,7 +47,7 @@ const handlePutMethod = async (req: NextApiRequest, res: NextApiResponse) => {
       return res.status(400).json({ error: "File tidak ditemukan" });
 
     const file = Array.isArray(files.file) ? files.file[0] : files.file;
-    const filePath = `/uploads/img/${file?.originalFilename}`;
+    const filePath = `/img/${file?.originalFilename}`;
     const titletmp = fields.title?.toString();
     const title = titletmp || "utitled";
 

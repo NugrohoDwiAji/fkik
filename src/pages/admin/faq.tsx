@@ -125,17 +125,17 @@ export default function QuestionAnswerTable() {
 
   return (
     <AdminLayout>
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100 p-4">
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-100 p-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-700 to-cyan-400 rounded-2xl mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-600 to-green-700 rounded-2xl mb-4">
               <Database className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-3xl font-bold text-gray-800 mb-2">
               Daftar Pertanyaan & Jawaban
             </h1>
-            <p className="text-cyan-400 text-shadow-lg/10 text-lg">
+            <p className="text-green-600 text-lg">
               Kelola dan lihat semua data Q&A yang tersimpan
             </p>
           </div>
@@ -156,17 +156,17 @@ export default function QuestionAnswerTable() {
           )}
 
           {/* Controls */}
-          <div className="bg-white rounded-2xl shadow-lg border border-purple-100 p-6 mb-6">
+          <div className="bg-white rounded-2xl shadow-lg border border-green-100 p-6 mb-6">
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               {/* Search */}
               <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-green-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Cari pertanyaan atau jawaban..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-purple-200 rounded-xl focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-colors"
+                  className="w-full pl-10 pr-4 py-2 border border-green-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
                 />
               </div>
 
@@ -177,7 +177,7 @@ export default function QuestionAnswerTable() {
                   <select
                     value={itemsPerPage}
                     onChange={(e) => setItemsPerPage(Number(e.target.value))}
-                    className="border border-purple-200 rounded-lg px-3 py-1 text-sm focus:ring-2 focus:ring-cyan-400"
+                    className="border border-green-200 rounded-lg px-3 py-1 text-sm focus:ring-2 focus:ring-green-500"
                   >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
@@ -197,7 +197,7 @@ export default function QuestionAnswerTable() {
                 
                 <button 
                   onClick={() => setIsDelete(!isDelete)} 
-                  className="inline-flex cursor-pointer items-center gap-2 bg-gradient-to-r from-blue-700 to-cyan-400 text-white px-4 py-2 rounded-xl font-semibold hover:from-blue-700 hover:to-cyan-400 transition-all duration-200"
+                  className="inline-flex cursor-pointer items-center gap-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-4 py-2 rounded-xl font-semibold hover:from-green-700 hover:to-green-800 transition-all duration-200"
                 >
                   <Plus className="w-4 h-4" />
                   Tambah Baru
@@ -206,34 +206,34 @@ export default function QuestionAnswerTable() {
             </div>
 
             {/* Stats */}
-            <div className="mt-4 pt-4 border-t border-purple-100">
+            <div className="mt-4 pt-4 border-t border-green-100">
               <div className="flex flex-wrap gap-4 text-sm text-gray-600">
                 <span>
                   Total:{" "}
-                  <strong className="text-cyan-400">{allData.length}</strong>{" "}
+                  <strong className="text-green-600">{allData.length}</strong>{" "}
                   item
                 </span>
                 <span>
                   Ditampilkan:{" "}
-                  <strong className="text-cyan-400">
+                  <strong className="text-green-600">
                     {currentData.length}
                   </strong>{" "}
                   item
                 </span>
                 <span>
                   Halaman:{" "}
-                  <strong className="text-cyan-400">{currentPage}</strong>{" "}
-                  dari <strong className="text-cyan-400">{totalPages}</strong>
+                  <strong className="text-green-600">{currentPage}</strong>{" "}
+                  dari <strong className="text-green-600">{totalPages}</strong>
                 </span>
               </div>
             </div>
           </div>
 
           {/* Table */}
-          <div className="bg-white rounded-2xl shadow-lg border border-purple-100 overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-lg border border-green-100 overflow-hidden">
             {loading && (
               <div className="text-center py-8">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400 mx-auto"></div>
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600 mx-auto"></div>
                 <p className="mt-2 text-gray-600">Memuat data...</p>
               </div>
             )}
@@ -242,7 +242,7 @@ export default function QuestionAnswerTable() {
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
-                    <tr className="bg-gradient-to-r from-blue-700 to-cyan-400 text-white">
+                    <tr className="bg-gradient-to-r from-green-600 to-green-700 text-white">
                       <th className="px-6 py-4 text-left text-sm font-semibold">
                         #
                       </th>
@@ -265,7 +265,7 @@ export default function QuestionAnswerTable() {
                       currentData.map((item, index) => (
                         <tr
                           key={item.id}
-                          className="border-b border-purple-50 hover:bg-purple-25 transition-colors"
+                          className="border-b border-green-50 hover:bg-green-25 transition-colors"
                         >
                           <td className="px-6 py-4 text-sm text-gray-600 font-medium">
                             {startIndex + index + 1}
@@ -287,7 +287,7 @@ export default function QuestionAnswerTable() {
                             <div className="flex items-center justify-center gap-2">
                               <button
                                 onClick={() => handleView(item)}
-                                className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                                className="p-2 text-green-600 hover:bg-green-50 rounded-lg transition-colors"
                                 title="Lihat Detail"
                               >
                                 <Eye className="w-4 h-4" />
@@ -333,7 +333,7 @@ export default function QuestionAnswerTable() {
 
             {/* Pagination */}
             {!loading && totalPages > 1 && (
-              <div className="bg-gray-50 px-6 py-4 border-t border-purple-100">
+              <div className="bg-gray-50 px-6 py-4 border-t border-green-100">
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-600">
                     Menampilkan {startIndex + 1} -{" "}
@@ -346,7 +346,7 @@ export default function QuestionAnswerTable() {
                         setCurrentPage(Math.max(1, currentPage - 1))
                       }
                       disabled={currentPage === 1}
-                      className="p-2 text-cyan-400 hover:bg-purple-50 rounded-lg disabled:text-gray-400 disabled:hover:bg-transparent transition-colors"
+                      className="p-2 text-green-600 hover:bg-green-50 rounded-lg disabled:text-gray-400 disabled:hover:bg-transparent transition-colors"
                     >
                       <ChevronLeft className="w-4 h-4" />
                     </button>
@@ -364,8 +364,8 @@ export default function QuestionAnswerTable() {
                             onClick={() => setCurrentPage(page)}
                             className={`px-3 py-1 text-sm rounded-lg transition-colors ${
                               currentPage === page
-                                ? "bg-cyan-400 text-white"
-                                : "text-cyan-400 hover:bg-purple-50"
+                                ? "bg-green-600 text-white"
+                                : "text-green-600 hover:bg-green-50"
                             }`}
                           >
                             {page}
@@ -389,7 +389,7 @@ export default function QuestionAnswerTable() {
                         setCurrentPage(Math.min(totalPages, currentPage + 1))
                       }
                       disabled={currentPage === totalPages}
-                      className="p-2 text-cyan-400 hover:bg-purple-50 rounded-lg disabled:text-gray-400 disabled:hover:bg-transparent transition-colors"
+                      className="p-2 text-green-600 hover:bg-green-50 rounded-lg disabled:text-gray-400 disabled:hover:bg-transparent transition-colors"
                     >
                       <ChevronRight className="w-4 h-4" />
                     </button>
@@ -404,7 +404,7 @@ export default function QuestionAnswerTable() {
         {showModal && selectedItem && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
             <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[80vh] overflow-y-auto">
-              <div className="bg-gradient-to-r from-blue-700 to-cyan-400 text-white p-6 rounded-t-2xl">
+              <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-6 rounded-t-2xl">
                 <h3 className="text-xl font-bold">
                   Detail Pertanyaan & Jawaban
                 </h3>
@@ -414,7 +414,7 @@ export default function QuestionAnswerTable() {
                   <h4 className="text-sm font-semibold text-gray-700 mb-2">
                     PERTANYAAN:
                   </h4>
-                  <p className="text-gray-800 bg-purple-50 p-4 rounded-xl">
+                  <p className="text-gray-800 bg-green-50 p-4 rounded-xl">
                     {selectedItem.question}
                   </p>
                 </div>
@@ -422,7 +422,7 @@ export default function QuestionAnswerTable() {
                   <h4 className="text-sm font-semibold text-gray-700 mb-2">
                     JAWABAN:
                   </h4>
-                  <p className="text-gray-800 bg-purple-50 p-4 rounded-xl">
+                  <p className="text-gray-800 bg-green-50 p-4 rounded-xl">
                     {selectedItem.answer}
                   </p>
                 </div>
