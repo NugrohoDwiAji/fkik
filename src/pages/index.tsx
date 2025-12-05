@@ -330,7 +330,7 @@ export default function Home() {
         <div className="h-32 w-[2px] bg-green-800 mx-2"></div>
         <img
           data-aos="zoom-in-down"
-          src="/img/LAMPTkes.jpg"
+          src="/img/LamPTkes.jpg"
           alt="eror"
           className=" h-24 md:h-32"
         />
